@@ -40,7 +40,7 @@ class MLPR(nn.Module):
         out = self.output_layer(out)
         return out
 
-    def fit(self, train_feats, train_labels, learning_rate=1e-3, num_epochs=10000, verbose=False):
+    def fit(self, train_feats, train_labels, learning_rate=1e-3, num_epochs=1000, verbose=False):
         training_losses = []
         if type(train_feats) is dict:
             train_feats = EMGClassifier()._format_data(train_feats)
